@@ -1,0 +1,16 @@
+panda_production: &PRODUCTION
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: wlob_clean_db
+  pool: 5
+  username: root
+  password:
+  host: 127.0.0.1
+
+update_db:
+  <<: *PRODUCTION
+  database: panda_test
+  username: root
+  password:
+  host: 127.0.0.1
